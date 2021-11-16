@@ -1,0 +1,33 @@
+<h1>TIENDA DE AUTOS</h1>
+<div class="products--grid">
+  <div *ngFor="let product of products">
+  <img  [src]="product.image" alt="image">
+  <h2>{{product.price}}</h2>
+  <p>{{product.name}}</p>
+  <button >Comprar</button>
+  </div>
+</div>
+<hr/>
+
+<form>
+  <div class="input-group">
+
+  </div>
+</form>
+<hr/>
+<h1>Fibonacci</h1>
+<input type="text" required [(ngModel)]="newName"/>
+<button (click)="addName()">Ingrese el numero</button>
+<ul>
+  <li *ngIf="names.length === 0">No hay numeros</li>
+  <li *ngFor="let name of names; index as i">
+   {{name}}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+
+</ul>
+
+
+
+
+
